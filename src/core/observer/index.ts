@@ -136,6 +136,7 @@ export function defineReactive(
   const dep = new Dep()
 
   const property = Object.getOwnPropertyDescriptor(obj, key)
+  // COMMENT: configurable特性表示对象的属性是否可以被删除，  如果不是配置的
   if (property && property.configurable === false) {
     return
   }

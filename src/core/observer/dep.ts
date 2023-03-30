@@ -43,7 +43,7 @@ export default class Dep {
   addSub(sub: DepTarget) {
     this.subs.push(sub)
   }
-
+  // COMMENT: 移除依赖收集器
   removeSub(sub: DepTarget) {
     // #12696 deps with massive amount of subscribers are extremely slow to
     // clean up in Chromium
